@@ -1,4 +1,4 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL || 'http://localhost:4000';
+const API_URL = (process.env.NEXT_PUBLIC_API_URL || 'https://new-experts-try.loca.lt').replace(/\/$/, '');
 
 interface FetchOptions extends RequestInit {
   token?: string;

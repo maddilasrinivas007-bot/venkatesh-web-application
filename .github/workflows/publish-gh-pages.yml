@@ -24,7 +24,7 @@ jobs:
         run: |
           npm run build --workspace=@nyayaai/web
         env:
-          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL != '' && secrets.NEXT_PUBLIC_API_URL || 'https://new-experts-try.loca.lt' }}
           NEXT_PUBLIC_APP_URL: https://maddilasrinivas007-bot.github.io/venkatesh-web-application
 
       - name: Deploy to gh-pages
