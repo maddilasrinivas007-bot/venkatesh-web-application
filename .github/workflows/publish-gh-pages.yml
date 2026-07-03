@@ -1,0 +1,35 @@
+name: Build and Publish to gh-pages
+
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Build web (export)
+        run: |
+          npm run build --workspace=@nyayaai/web
+        env:
+          NEXT_PUBLIC_API_URL: ${{ secrets.NEXT_PUBLIC_API_URL }}
+          NEXT_PUBLIC_APP_URL: https://maddilasrinivas007-bot.github.io/venkatesh-web-application
+
+      - name: Deploy to gh-pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          publish_dir: ./apps/web/out
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
