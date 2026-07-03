@@ -8,6 +8,8 @@ permissions:
   contents: read
   pages: write
 
+# Ensure GitHub Pages serves the exported site from the gh-pages branch.
+
 jobs:
   set-pages-source:
     runs-on: ubuntu-latest
