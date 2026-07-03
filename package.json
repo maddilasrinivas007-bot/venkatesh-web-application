@@ -1,0 +1,29 @@
+{
+  "name": "nyayaai",
+  "version": "1.0.0",
+  "private": true,
+  "description": "NyayaAI – India's Intelligent Legal Ecosystem",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev:api\" \"npm run dev:web\"",
+    "dev:web": "npm run dev --workspace=@nyayaai/web",
+    "dev:api": "npm run dev --workspace=@nyayaai/api",
+    "build": "npm run build --workspaces --if-present",
+    "db:generate": "npm run generate --workspace=@nyayaai/database",
+    "db:migrate": "npm run migrate --workspace=@nyayaai/database",
+    "db:push": "npm run push --workspace=@nyayaai/database",
+    "db:seed": "npm run seed --workspace=@nyayaai/database",
+    "lint": "npm run lint --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  },
+  "devDependencies": {
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
+  },
+  "engines": {
+    "node": ">=20.0.0"
+  }
+}
