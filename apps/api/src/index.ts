@@ -13,11 +13,25 @@ import routes from './routes';
 import { errorHandler, notFoundHandler } from './middleware/errorHandler';
 
 const app = express();
+const allowedOrigins = [
+  env.NEXT_PUBLIC_APP_URL,
+  'http://localhost:3000',
+  'http://localhost:4000',
+  'https://maddilasrinivas007-bot.github.io',
+  'https://maddilasrinivas007-bot.github.io/venkatesh-web-application',
+  'https://bumpy-actors-dig.loca.lt',
+].filter(Boolean);
 
 app.use(helmet());
 app.use(
   cors({
-    origin: [env.NEXT_PUBLIC_APP_URL, 'http://localhost:3000'],
+    origin: (origin, callback) => {
+      if (!origin || allowedOrigins.includes(origin)) {
+        callback(null, true);
+        return;
+      }
+      callback(new Error(`Origin ${origin} not allowed by CORS`));
+    },
     credentials: true,
   })
 );

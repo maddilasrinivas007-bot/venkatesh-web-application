@@ -34,6 +34,8 @@ jobs:
         run: npm run build --workspace=@nyayaai/web
         env:
           GITHUB_ACTIONS: true
+          NEXT_PUBLIC_API_URL: https://bumpy-actors-dig.loca.lt
+          NEXT_PUBLIC_APP_URL: https://maddilasrinivas007-bot.github.io/venkatesh-web-application
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
