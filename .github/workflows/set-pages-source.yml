@@ -1,0 +1,24 @@
+name: Ensure GitHub Pages source
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+
+jobs:
+  set-pages-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Set Pages source to gh-pages
+        uses: actions/github-script@v6
+        with:
+          script: |
+            await github.request('PUT /repos/{owner}/{repo}/pages', {
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              source: { branch: 'gh-pages', path: '/' }
+            });
+            core.info('Pages source set to gh-pages');
