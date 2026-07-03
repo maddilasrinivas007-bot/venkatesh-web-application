@@ -132,7 +132,7 @@ export function CTASection() {
           viewport={{ once: true }}
           className="relative rounded-3xl overflow-hidden"
         >
-          <div className="absolute inset-0 bg-gradient-to-r from-primary to-secondary" />
+          <div className="absolute inset-0 bg-hero-judiciary" />
           <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggIGQ9Ik0zNiAzNGg0djJoLTR6bTAgNGg0djJoLTR6bTAtNGg0djJoLTR6bTAtNGg0djJoLTR6bTAtNGg0djJoLTR6Ii8+PC9nPjwvZz48L3N2Zz4=')] opacity-30" />
           <div className="relative px-8 py-16 md:py-20 text-center text-white">
             <h2 className="font-display text-4xl md:text-5xl font-bold mb-4">
@@ -142,7 +142,7 @@ export function CTASection() {
               Join thousands of citizens, advocates, and businesses using NyayaAI to navigate Indian law with confidence.
             </p>
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <a href="/register" className="inline-flex h-13 items-center px-8 rounded-xl bg-white text-primary font-semibold shadow-xl hover:bg-white/90 transition-colors">
+              <a href="/register" className="inline-flex h-13 items-center px-8 rounded-xl gradient-gold text-white font-semibold shadow-gold hover:opacity-95 transition-opacity">
                 Start Free — No Credit Card
               </a>
               <a href="/dashboard/ai" className="inline-flex h-13 items-center px-8 rounded-xl border-2 border-white/30 font-semibold hover:bg-white/10 transition-colors">

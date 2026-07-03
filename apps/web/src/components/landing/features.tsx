@@ -9,60 +9,15 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { PRACTICE_AREAS } from '@nyayaai/shared';
 
 const features = [
-  {
-    icon: Brain,
-    title: 'AI Legal Assistant',
-    description: 'ChatGPT-style assistant with constitutional citations, statutory references, and case law precedents.',
-    color: 'from-blue-500 to-blue-600',
-  },
-  {
-    icon: Search,
-    title: 'Judicial Research',
-    description: 'Search 1M+ Supreme Court and High Court judgments with advanced filters and AI summaries.',
-    color: 'from-emerald-500 to-emerald-600',
-  },
-  {
-    icon: FileText,
-    title: 'Document Generator',
-    description: 'Generate legal notices, agreements, affidavits, and court petitions with AI assistance.',
-    color: 'from-amber-500 to-amber-600',
-  },
-  {
-    icon: Users,
-    title: 'Advocate Marketplace',
-    description: 'Connect with verified advocates, book consultations, and get expert legal guidance.',
-    color: 'from-purple-500 to-purple-600',
-  },
-  {
-    icon: BookOpen,
-    title: 'Constitution Explorer',
-    description: 'Interactive exploration of the Constitution of India with articles, amendments, and rights.',
-    color: 'from-rose-500 to-rose-600',
-  },
-  {
-    icon: Shield,
-    title: 'Contract Review',
-    description: 'AI-powered contract analysis with clause extraction, risk assessment, and recommendations.',
-    color: 'from-cyan-500 to-cyan-600',
-  },
-  {
-    icon: Mic,
-    title: 'Voice Assistant',
-    description: 'Ask legal questions by voice with speech recognition and synthesis in Indian languages.',
-    color: 'from-indigo-500 to-indigo-600',
-  },
-  {
-    icon: FileSearch,
-    title: 'PDF Chat & OCR',
-    description: 'Upload legal documents, extract text via OCR, and chat with your documents using AI.',
-    color: 'from-teal-500 to-teal-600',
-  },
-  {
-    icon: Languages,
-    title: 'Multi-Language',
-    description: 'Legal guidance in English, Hindi, and 10+ Indian regional languages.',
-    color: 'from-orange-500 to-orange-600',
-  },
+  { icon: Brain, title: 'AI Legal Assistant', description: 'ChatGPT-style assistant with constitutional citations, statutory references, and case law precedents.', color: 'from-navy to-primary' },
+  { icon: Search, title: 'Judicial Research', description: 'Search 1M+ Supreme Court and High Court judgments with advanced filters and AI summaries.', color: 'from-primary to-[#2563EB]' },
+  { icon: FileText, title: 'Document Generator', description: 'Generate legal notices, agreements, affidavits, and court petitions with AI assistance.', color: 'from-accent to-[#EAB308]' },
+  { icon: Users, title: 'Advocate Marketplace', description: 'Connect with verified advocates, book consultations, and get expert legal guidance.', color: 'from-navy to-primary' },
+  { icon: BookOpen, title: 'Constitution Explorer', description: 'Interactive exploration of the Constitution of India with articles, amendments, and rights.', color: 'from-primary to-secondary' },
+  { icon: Shield, title: 'Contract Review', description: 'AI-powered contract analysis with clause extraction, risk assessment, and recommendations.', color: 'from-secondary to-[#14B8A6]' },
+  { icon: Mic, title: 'Voice Assistant', description: 'Ask legal questions by voice with speech recognition and synthesis in Indian languages.', color: 'from-navy to-[#2563EB]' },
+  { icon: FileSearch, title: 'PDF Chat & OCR', description: 'Upload legal documents, extract text via OCR, and chat with your documents using AI.', color: 'from-primary to-secondary' },
+  { icon: Languages, title: 'Multi-Language', description: 'Legal guidance in English, Hindi, and 10+ Indian regional languages.', color: 'from-accent to-[#EAB308]' },
 ];
 
 const container = {
@@ -166,7 +121,7 @@ export function ConstitutionSection() {
   ];
 
   return (
-    <section id="constitution" className="py-24 bg-gradient-to-b from-primary/5 to-transparent">
+    <section id="constitution" className="py-24 bg-navy/5 dark:bg-navy/20">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div

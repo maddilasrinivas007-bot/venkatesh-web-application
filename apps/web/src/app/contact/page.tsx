@@ -7,7 +7,7 @@ import { OwnerHighlight } from '@/components/landing/owner-highlight';
 
 export default function ContactPage() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary/5 via-background to-secondary/5">
+    <div className="min-h-screen bg-background">
       <div className="container mx-auto px-4 py-12 max-w-4xl">
         <Link href="/" className="inline-flex items-center gap-2 text-sm text-muted-foreground hover:text-foreground mb-8">
           <ArrowLeft className="h-4 w-4" />
@@ -17,7 +17,7 @@ export default function ContactPage() {
         <OwnerHighlight variant="card" className="mb-8" />
 
         <div className="flex items-center gap-3 mb-8">
-          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl gradient-gold text-white shadow-gold">
             <Scale className="h-6 w-6" />
           </div>
           <div>
@@ -48,10 +48,10 @@ export default function ContactPage() {
                 </div>
               </div>
               <div className="flex items-start gap-4">
-                <MessageCircle className="h-5 w-5 text-green-600 mt-0.5" />
+                <MessageCircle className="h-5 w-5 text-secondary mt-0.5" />
                 <div>
                   <div className="font-medium mb-1">WhatsApp</div>
-                  <a href={CONTACT_INFO.whatsappHref} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-green-600">
+                  <a href={CONTACT_INFO.whatsappHref} target="_blank" rel="noopener noreferrer" className="text-sm text-muted-foreground hover:text-secondary">
                     {CONTACT_INFO.whatsapp}
                   </a>
                 </div>

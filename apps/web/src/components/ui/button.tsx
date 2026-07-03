@@ -8,12 +8,22 @@ const buttonVariants = cva(
   {
     variants: {
       variant: {
-        default: 'bg-primary text-primary-foreground shadow-lg shadow-primary/25 hover:bg-primary/90 hover:shadow-xl hover:shadow-primary/30',
-        secondary: 'bg-secondary text-secondary-foreground shadow-lg shadow-secondary/25 hover:bg-secondary/90',
-        outline: 'border-2 border-primary/20 bg-transparent hover:bg-primary/5 dark:hover:bg-primary/10',
-        ghost: 'hover:bg-muted',
-        gradient: 'bg-gradient-to-r from-primary to-secondary text-white shadow-lg hover:shadow-xl hover:opacity-95',
-        accent: 'bg-accent text-accent-foreground shadow-lg hover:bg-accent/90',
+        default:
+          'bg-primary text-primary-foreground shadow-judiciary hover:bg-navy hover:shadow-judiciary-lg',
+        secondary:
+          'bg-secondary text-secondary-foreground shadow-judiciary hover:bg-secondary/90',
+        outline:
+          'border-2 border-primary/30 bg-transparent text-navy dark:text-foreground hover:bg-primary/5 hover:border-primary',
+        ghost:
+          'text-foreground hover:bg-muted hover:text-navy dark:hover:text-white',
+        gradient:
+          'gradient-primary text-white shadow-judiciary-lg hover:opacity-95 hover:shadow-judiciary',
+        accent:
+          'gradient-gold text-white shadow-gold hover:opacity-95',
+        premium:
+          'gradient-gold text-white shadow-gold hover:opacity-95 font-semibold',
+        navy:
+          'bg-navy text-white shadow-judiciary hover:bg-navy/90',
       },
       size: {
         default: 'h-11 px-6 py-2',

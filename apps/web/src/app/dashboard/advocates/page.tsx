@@ -43,7 +43,7 @@ export default function AdvocatesPage() {
             <Card key={adv.id} className="glass-card border-0 hover:shadow-lg transition-shadow">
               <CardContent className="p-6">
                 <div className="flex items-center gap-3 mb-4">
-                  <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-lg font-bold">
+                  <div className="h-14 w-14 rounded-2xl gradient-primary flex items-center justify-center text-white text-lg font-bold">
                     {profile?.firstName?.[0]}{profile?.lastName?.[0]}
                   </div>
                   <div>

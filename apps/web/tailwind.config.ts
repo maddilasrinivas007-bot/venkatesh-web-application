@@ -15,6 +15,15 @@ const config: Config = {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        navy: {
+          DEFAULT: 'hsl(var(--navy))',
+          foreground: 'hsl(var(--navy-foreground))',
+        },
+        sidebar: {
+          DEFAULT: 'hsl(var(--sidebar))',
+          foreground: 'hsl(var(--sidebar-foreground))',
+        },
+        saffron: 'hsl(var(--saffron))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -43,11 +52,32 @@ const config: Config = {
           DEFAULT: 'hsl(var(--popover))',
           foreground: 'hsl(var(--popover-foreground))',
         },
+        judiciary: {
+          navy: '#0B1F3A',
+          ashoka: '#1D4ED8',
+          gold: '#C99700',
+          white: '#FAFAF8',
+          marble: '#E5E7EB',
+          charcoal: '#1F2937',
+          justice: '#0F766E',
+          red: '#B91C1C',
+          saffron: '#E67E22',
+        },
+      },
+      backgroundImage: {
+        'hero-judiciary': 'linear-gradient(135deg, #07121F 0%, #0B1F3A 50%, #1D4ED8 100%)',
+        'gradient-navy': 'linear-gradient(135deg, #0B1F3A 0%, #1D4ED8 100%)',
+        'gradient-gold': 'linear-gradient(135deg, #C99700 0%, #EAB308 100%)',
       },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
+      },
+      boxShadow: {
+        judiciary: '0 4px 24px -4px rgba(11, 31, 58, 0.12)',
+        'judiciary-lg': '0 8px 32px -8px rgba(11, 31, 58, 0.18)',
+        gold: '0 4px 20px -4px rgba(201, 151, 0, 0.25)',
       },
       animation: {
         'fade-in': 'fadeIn 0.5s ease-out',

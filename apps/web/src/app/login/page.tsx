@@ -45,11 +45,11 @@ export default function LoginPage() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-primary/5 via-background to-secondary/5">
-      <Card className="w-full max-w-md glass-card border-0 shadow-2xl">
+    <div className="min-h-screen flex items-center justify-center p-4 bg-background">
+      <Card className="w-full max-w-md judiciary-card border-0 shadow-judiciary-lg">
         <CardHeader className="text-center">
           <Link href="/" className="inline-flex items-center justify-center gap-2 mb-4">
-            <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-secondary text-white">
+            <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-gold text-white shadow-gold">
               <Scale className="h-5 w-5" />
             </div>
             <span className="text-2xl font-bold">Nyaya<span className="text-primary">AI</span></span>

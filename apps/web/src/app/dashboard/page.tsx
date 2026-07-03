@@ -10,10 +10,10 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 
 const quickActions = [
-  { href: '/dashboard/ai', label: 'Ask AI', icon: Brain, color: 'from-blue-500 to-blue-600' },
-  { href: '/dashboard/research', label: 'Research', icon: Search, color: 'from-emerald-500 to-emerald-600' },
-  { href: '/dashboard/documents', label: 'Documents', icon: FileText, color: 'from-amber-500 to-amber-600' },
-  { href: '/dashboard/advocates', label: 'Find Advocate', icon: Users, color: 'from-purple-500 to-purple-600' },
+  { href: '/dashboard/ai', label: 'Ask AI', icon: Brain, color: 'from-navy to-primary' },
+  { href: '/dashboard/research', label: 'Research', icon: Search, color: 'from-primary to-[#2563EB]' },
+  { href: '/dashboard/documents', label: 'Documents', icon: FileText, color: 'from-accent to-[#EAB308]' },
+  { href: '/dashboard/advocates', label: 'Find Advocate', icon: Users, color: 'from-navy to-primary' },
 ];
 
 const recentActivity = [

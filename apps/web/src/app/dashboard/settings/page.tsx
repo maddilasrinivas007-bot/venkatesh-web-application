@@ -40,7 +40,7 @@ export default function SettingsPage() {
           <a href={CONTACT_INFO.phoneHref} className="flex items-center gap-2 text-muted-foreground hover:text-primary">
             <Phone className="h-4 w-4" />{CONTACT_INFO.phone}
           </a>
-          <a href={CONTACT_INFO.whatsappHref} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-green-600">
+          <a href={CONTACT_INFO.whatsappHref} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2 text-muted-foreground hover:text-secondary">
             <MessageCircle className="h-4 w-4" />WhatsApp: {CONTACT_INFO.whatsapp}
           </a>
           <div className="flex items-start gap-2 text-muted-foreground">

@@ -24,11 +24,11 @@ export default function AdminDashboard() {
   }, []);
 
   const statCards = stats ? [
-    { label: 'Total Users', value: stats.users, icon: Users, color: 'from-blue-500 to-blue-600' },
-    { label: 'Verified Advocates', value: stats.advocates, icon: Shield, color: 'from-emerald-500 to-emerald-600' },
-    { label: 'Judgments Indexed', value: stats.judgments, icon: Gavel, color: 'from-amber-500 to-amber-600' },
-    { label: 'Documents', value: stats.documents, icon: FileText, color: 'from-purple-500 to-purple-600' },
-    { label: 'AI Conversations', value: stats.conversations, icon: MessageSquare, color: 'from-rose-500 to-rose-600' },
+    { label: 'Total Users', value: stats.users, icon: Users, color: 'from-navy to-primary' },
+    { label: 'Verified Advocates', value: stats.advocates, icon: Shield, color: 'from-secondary to-[#14B8A6]' },
+    { label: 'Judgments Indexed', value: stats.judgments, icon: Gavel, color: 'from-accent to-[#EAB308]' },
+    { label: 'Documents', value: stats.documents, icon: FileText, color: 'from-primary to-[#2563EB]' },
+    { label: 'AI Conversations', value: stats.conversations, icon: MessageSquare, color: 'from-navy to-primary' },
   ] : [];
 
   return (

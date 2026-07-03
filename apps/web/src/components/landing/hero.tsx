@@ -51,14 +51,15 @@ export function HeroSection() {
   }
 
   return (
-    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-secondary/5" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-primary/10 via-transparent to-transparent" />
+    <section className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-background">
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_rgba(29,78,216,0.08),_transparent_60%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_rgba(11,31,58,0.06),_transparent_50%)]" />
+      <div className="absolute top-0 left-0 right-0 h-1 gradient-gold" />
 
       {floatingIcons.map(({ Icon, delay, x, y }, i) => (
         <motion.div
           key={i}
-          className="absolute hidden lg:flex h-12 w-12 items-center justify-center rounded-2xl glass-card text-primary/40"
+          className="absolute hidden lg:flex h-12 w-12 items-center justify-center rounded-2xl glass-card text-primary/60 border-accent/20"
           style={{ left: x, top: y }}
           animate={{ y: [0, -15, 0] }}
           transition={{ duration: 4, delay, repeat: Infinity, ease: 'easeInOut' }}

@@ -6,48 +6,61 @@
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222 47% 11%;
+    /* Indian Judiciary Light Theme */
+    --background: 60 20% 98%;          /* Constitution White #FAFAF8 */
+    --foreground: 215 28% 17%;       /* Courtroom Charcoal #1F2937 */
     --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card-foreground: 215 28% 17%;
     --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
-    --primary: 217 91% 50%;
+    --popover-foreground: 215 28% 17%;
+    --primary: 224 76% 48%;          /* Ashoka Blue #1D4ED8 */
     --primary-foreground: 0 0% 100%;
-    --secondary: 160 84% 39%;
+    --secondary: 175 77% 26%;        /* Justice Green #0F766E */
     --secondary-foreground: 0 0% 100%;
-    --accent: 43 96% 56%;
-    --accent-foreground: 222 47% 11%;
-    --muted: 210 40% 96%;
+    --accent: 43 100% 39%;           /* Supreme Court Gold #C99700 */
+    --accent-foreground: 0 0% 100%;
+    --muted: 220 14% 96%;
     --muted-foreground: 215 16% 47%;
-    --destructive: 0 84% 60%;
+    --destructive: 0 74% 42%;        /* Legal Red #B91C1C */
     --destructive-foreground: 0 0% 100%;
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 217 91% 50%;
+    --border: 220 13% 91%;           /* Marble Gray #E5E7EB */
+    --input: 220 13% 91%;
+    --ring: 224 76% 48%;
     --radius: 0.75rem;
+
+    /* Judiciary brand tokens */
+    --navy: 215 69% 14%;             /* Constitutional Navy #0B1F3A */
+    --navy-foreground: 0 0% 100%;
+    --saffron: 28 80% 52%;           /* Indian Saffron #E67E22 */
+    --sidebar: 215 69% 14%;
+    --sidebar-foreground: 0 0% 100%;
   }
 
   .dark {
-    --background: 222 47% 6%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 8%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 8%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 217 91% 60%;
+    --background: 214 63% 8%;          /* #07121F */
+    --foreground: 0 0% 100%;
+    --card: 214 58% 15%;             /* #10233D */
+    --card-foreground: 0 0% 100%;
+    --popover: 214 58% 15%;
+    --popover-foreground: 0 0% 100%;
+    --primary: 224 76% 48%;            /* Ashoka Blue buttons */
     --primary-foreground: 0 0% 100%;
-    --secondary: 160 84% 45%;
+    --secondary: 175 77% 32%;
     --secondary-foreground: 0 0% 100%;
-    --accent: 43 96% 56%;
-    --accent-foreground: 222 47% 11%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 217 91% 60%;
+    --accent: 43 100% 39%;             /* Supreme Court Gold */
+    --accent-foreground: 0 0% 100%;
+    --muted: 214 58% 18%;
+    --muted-foreground: 215 20% 80%;   /* #CBD5E1 */
+    --destructive: 0 74% 42%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 214 40% 22%;
+    --input: 214 40% 22%;
+    --ring: 224 76% 48%;
+
+    --navy: 214 68% 10%;               /* Sidebar #08182B */
+    --navy-foreground: 0 0% 100%;
+    --sidebar: 214 68% 10%;
+    --sidebar-foreground: 0 0% 100%;
   }
 }
 
@@ -58,19 +71,40 @@
   body {
     @apply bg-background text-foreground font-sans antialiased;
   }
+  h1, h2, h3, h4, h5, h6 {
+    @apply text-navy dark:text-white;
+  }
 }
 
 @layer utilities {
   .glass {
-    @apply bg-white/70 dark:bg-gray-900/70 backdrop-blur-xl border border-white/20 dark:border-gray-700/30;
+    @apply bg-white/80 dark:bg-card/80 backdrop-blur-xl border border-border/60;
   }
   .glass-card {
-    @apply glass rounded-2xl shadow-xl shadow-black/5 dark:shadow-black/20;
+    @apply glass rounded-2xl shadow-lg shadow-navy/5 dark:shadow-black/30;
   }
   .gradient-text {
-    @apply bg-gradient-to-r from-primary via-blue-600 to-secondary bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-navy via-primary to-accent bg-clip-text text-transparent;
   }
-  .gradient-border {
-    @apply relative before:absolute before:inset-0 before:rounded-2xl before:p-[1px] before:bg-gradient-to-r before:from-primary before:to-secondary before:-z-10;
+  .gradient-primary {
+    @apply bg-gradient-to-r from-navy to-primary;
+  }
+  .gradient-premium {
+    @apply bg-gradient-to-r from-primary to-[#2563EB];
+  }
+  .gradient-gold {
+    @apply bg-gradient-to-r from-accent to-[#EAB308];
+  }
+  .gradient-hero {
+    @apply bg-gradient-to-br from-[#07121F] via-navy to-primary;
+  }
+  .judiciary-card {
+    @apply bg-card border border-border rounded-2xl shadow-sm;
+  }
+  .text-heading {
+    @apply text-navy dark:text-white;
+  }
+  .link-judiciary {
+    @apply text-primary hover:text-navy dark:hover:text-accent transition-colors;
   }
 }

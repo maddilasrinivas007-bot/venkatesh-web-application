@@ -59,7 +59,7 @@ export function ContactSection() {
           <motion.div initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: 0.2 }}>
             <Card className="glass-card border-0 h-full hover:shadow-lg transition-shadow">
               <CardContent className="p-6 text-center">
-                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-green-500/10 text-green-600 mb-4">
+                <div className="inline-flex h-12 w-12 items-center justify-center rounded-xl bg-secondary/10 text-secondary mb-4">
                   <MessageCircle className="h-6 w-6" />
                 </div>
                 <h3 className="font-semibold mb-2">WhatsApp</h3>
@@ -67,7 +67,7 @@ export function ContactSection() {
                   href={CONTACT_INFO.whatsappHref}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="text-sm text-muted-foreground hover:text-green-600 transition-colors"
+                  className="text-sm text-muted-foreground hover:text-secondary transition-colors"
                 >
                   {CONTACT_INFO.whatsapp}
                 </a>

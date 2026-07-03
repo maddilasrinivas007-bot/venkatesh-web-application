@@ -73,7 +73,7 @@ export function AdvocatesSection() {
               <Card className="glass-card border-0 h-full hover:shadow-xl transition-shadow">
                 <CardContent className="p-6">
                   <div className="flex items-center gap-3 mb-4">
-                    <div className="h-14 w-14 rounded-2xl bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-xl font-bold">
+                    <div className="h-14 w-14 rounded-2xl gradient-primary flex items-center justify-center text-white text-xl font-bold">
                       {adv.name.split(' ')[1]?.[0]}{adv.name.split(' ')[2]?.[0] || adv.name.split(' ')[1]?.[1]}
                     </div>
                     <div>

@@ -55,7 +55,7 @@ export default function AdminUsersPage() {
           <Card key={user.id} className="glass-card border-0">
             <CardContent className="p-4 flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-primary to-secondary flex items-center justify-center text-white text-sm font-bold">
+                <div className="h-10 w-10 rounded-full gradient-gold flex items-center justify-center text-white text-sm font-bold">
                   {user.profile?.firstName?.[0] || user.email[0].toUpperCase()}
                 </div>
                 <div>

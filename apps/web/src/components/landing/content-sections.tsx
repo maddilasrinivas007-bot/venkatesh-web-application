@@ -9,7 +9,7 @@ import { DOCUMENT_TEMPLATES } from '@nyayaai/shared';
 
 export function DocumentGeneratorSection() {
   return (
-    <section className="py-24 bg-gradient-to-b from-secondary/5 to-transparent">
+    <section className="py-24 bg-secondary/5">
       <div className="container mx-auto px-4 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <motion.div
